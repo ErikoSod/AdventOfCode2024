@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9092b76b-f09d-49d9-b440-1103f0485c36" name="Changes" comment="Updated part two.">
-      <change afterPath="$PROJECT_DIR$/src/Nr2/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Nr2/levelChecker.java" afterDir="false" />
+    <list default="true" id="9092b76b-f09d-49d9-b440-1103f0485c36" name="Changes" comment="Nr2.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Nr2/levelChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Nr2/levelChecker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +109,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733161222234</updated>
-      <workItem from="1733161223282" duration="11475000" />
+      <workItem from="1733161223282" duration="16454000" />
     </task>
     <task id="LOCAL-00001" summary="Added problem nr1.">
       <option name="closed" value="true" />
@@ -136,7 +135,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733166797195</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Nr2.">
+      <option name="closed" value="true" />
+      <created>1733173469688</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1733173469688</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -146,7 +153,8 @@
     <MESSAGE value="Added problem nr1." />
     <MESSAGE value="Updated filepath." />
     <MESSAGE value="Updated part two." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated part two." />
+    <MESSAGE value="Nr2." />
+    <option name="LAST_COMMIT_MESSAGE" value="Nr2." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

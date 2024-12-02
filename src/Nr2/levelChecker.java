@@ -3,6 +3,9 @@ package Nr2;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class levelChecker {
 
@@ -12,8 +15,9 @@ public class levelChecker {
             int numberOfSafeReports = 0;
             String line;
             while ((line = br.readLine()) != null) {
-
-                numberOfSafeReports += safeChecker(line);
+                List<Integer> lineAsList;
+                lineAsList = lineToList(line);
+                numberOfSafeReports += safeChecker(lineAsList);
             }
 
             System.out.println(numberOfSafeReports);
@@ -23,59 +27,39 @@ public class levelChecker {
         }
     }
 
-    private int safeChecker(String line) {
-        int direction = directionChecker(line);
-        int safeChecker = 0;
-        boolean increase;
-        switch (direction) {
-            case 1 -> increase = true;
-            case -1 -> increase = false;
-            default -> {
-                return 0;
+    private int safeChecker(List<Integer> lineAsList) {
+        int isSafe = 0;
+        if (lineAsList.getFirst() >lineAsList.getLast()) {
+            Collections.reverse(lineAsList);
+        }
+        int temp;
+        for (int i = 0; i < lineAsList.size()-1; i++) {
+            temp = lineAsList.get(i+1) - lineAsList.get(i);
+            switch (temp){
+                case 1,2,3 -> isSafe=1;
+                default -> {return 0;}
             }
         }
-        while (line.length() > 2) {
-            String tempFirstNumber = line.substring(0, line.indexOf(" "));
-            line = line.replaceFirst(tempFirstNumber, "").trim();
-            String tempSecondNumber;
-            if(line.length() > 2){
-                tempSecondNumber = line.substring(0, line.indexOf(" "));
-            }else {
-                tempSecondNumber = line;
-            }
-            int tempIntFirstNumber = Integer.parseInt(tempFirstNumber);
-            int tempIntSecondNumber = Integer.parseInt(tempSecondNumber);
-            int safe;
-            if (increase) {
-                safe = tempIntSecondNumber - tempIntFirstNumber;
-            } else {
-                safe = tempIntFirstNumber - tempIntSecondNumber;
-            }
-            switch (safe) {
-                case 1, 3, 2 -> safeChecker = 1;
-                default -> {
-                    return 0;
-                }
-            }
-        }
-        return safeChecker;
+
+
+
+        return isSafe;
     }
 
-    private int directionChecker(String line) {
+    private List<Integer> lineToList(String line) {
 
-        int direction =0;
-        String tempFirstNumber = line.substring(0, line.indexOf(" "));
-        line = line.replaceFirst(tempFirstNumber, "").trim();
-        String tempSecondNumber ="";
-        tempSecondNumber = line.substring(0, line.indexOf(" "));
-        int tempIntFirstNumber = Integer.parseInt(tempFirstNumber);
-        int tempIntSecondNumber = Integer.parseInt(tempSecondNumber);
-        if (tempIntFirstNumber > tempIntSecondNumber) {
-            direction = -1;
-        } else if (tempIntFirstNumber < tempIntSecondNumber) {
-            direction = 1;
+        List<Integer> lineAsList = new ArrayList<>();
+        String tempFirstNumber;
+        while (!line.isEmpty()) {
+            if(line.contains(" ")){
+                tempFirstNumber = line.substring(0, line.indexOf(" "));
+            }else{
+                tempFirstNumber = line;
+            }
+            line = line.replaceFirst(tempFirstNumber, "").trim();
+            lineAsList.add(Integer.parseInt(tempFirstNumber));
         }
-        return direction;
+        return lineAsList;
     }
 
     public static void main(String[] args) {
