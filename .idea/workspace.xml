@@ -4,17 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9092b76b-f09d-49d9-b440-1103f0485c36" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AdventOfCode2024.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ListReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/input.txt" afterDir="false" />
-    </list>
+    <list default="true" id="9092b76b-f09d-49d9-b440-1103f0485c36" name="Changes" comment="Added problem nr1." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -30,6 +20,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/ErikoSod/AdventOfCode2024",
+    "accountId": "c0a37354-ecbf-402a-9d24-b2f2745904fe"
+  }
+}]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 8
 }]]></component>
@@ -53,9 +49,15 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\eriko\IdeaProjects\AdventOfCode2024\src\Number 1" />
+      <recent name="C:\Users\eriko\IdeaProjects\AdventOfCode2024\src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="ListReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ListReader" />
+      <option name="MAIN_CLASS_NAME" value="Nr1.ListReader" />
       <module name="AdventOfCode2024" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -83,11 +85,24 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733161222234</updated>
-      <workItem from="1733161223282" duration="3846000" />
+      <workItem from="1733161223282" duration="4422000" />
     </task>
+    <task id="LOCAL-00001" summary="Added problem nr1.">
+      <option name="closed" value="true" />
+      <created>1733165589837</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1733165589837</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added problem nr1." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added problem nr1." />
   </component>
 </project>

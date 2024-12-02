@@ -11,15 +11,13 @@ public class ListReader {
         List<Integer> firstList = new ArrayList<>();
         List<Integer> secondList = new ArrayList<>();
 
-        try(BufferedReader br = new BufferedReader (new FileReader("src/input.txt")))
+        try(BufferedReader br = new BufferedReader (new FileReader("src/Nr1/input.txt")))
         {
             String line;
             while ((line = br.readLine()) != null) {
                 lineSplitter(firstList,secondList, line);
             }
 
-        } catch (FileNotFoundException e) {
-            throw new RuntimeException(e);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
