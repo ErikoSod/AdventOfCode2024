@@ -25,9 +25,30 @@ public class ListReader {
         Collections.sort(firstList);
         Collections.sort(secondList);
 
-        int result = diffrenceAdder(firstList,secondList);
+        int resultPartOne = diffrenceAdder(firstList,secondList);
 
-        System.out.println(result);
+        System.out.println("Part one results: "+resultPartOne);
+        System.out.println();
+
+
+        int resultPartTwo = similarityScorer(firstList,secondList);
+
+
+        System.out.println("Part two results: "+resultPartTwo);
+    }
+
+    private int similarityScorer(List<Integer> firstList, List<Integer> secondList) {
+        int resultPartTwo =0;
+        for(Integer i : firstList){
+            int temp =0;
+            for(Integer j : secondList){
+                if(i.equals(j)){
+                    temp++;
+                }
+            }
+            resultPartTwo += temp*i;
+        }
+        return resultPartTwo;
     }
 
     private void lineSplitter(List<Integer> firstList, List<Integer> secondList,String line) {
@@ -38,7 +59,7 @@ public class ListReader {
     }
 
     private int diffrenceAdder(List<Integer> firstList, List<Integer> secondList) {
-        int result = 0;
+        int resultPartOne = 0;
         if(firstList.size() == secondList.size()) {
             for (int i = 0; i < firstList.size(); i++) {
                 int firstInt = firstList.get(i);
@@ -46,15 +67,15 @@ public class ListReader {
                 int temp;
                 if (firstInt > secondInt) {
                     temp = firstInt - secondInt;
-                    result += temp;
+                    resultPartOne += temp;
                 } else {
                     temp = secondInt - firstInt;
-                    result += temp;
+                    resultPartOne += temp;
                 }
 
             }
         }
-        return result;
+        return resultPartOne; //Part1
     }
 
     public static void main(String[] args) {
