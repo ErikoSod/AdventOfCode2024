@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9092b76b-f09d-49d9-b440-1103f0485c36" name="Changes" comment="Updated filepath.">
+    <list default="true" id="9092b76b-f09d-49d9-b440-1103f0485c36" name="Changes" comment="Updated part two.">
+      <change afterPath="$PROJECT_DIR$/src/Nr2/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Nr2/levelChecker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Nr1/ListReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Nr1/ListReader.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +47,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.ListReader.executor": "Run",
+    "Application.ListReader.executor": "Debug",
+    "Application.levelChecker.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
@@ -64,7 +66,7 @@
       <recent name="C:\Users\eriko\IdeaProjects\AdventOfCode2024\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.levelChecker">
     <configuration name="ListReader" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Nr1.ListReader" />
       <module name="AdventOfCode2024" />
@@ -72,8 +74,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="levelChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Nr2.levelChecker" />
+      <module name="AdventOfCode2024" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Nr2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.levelChecker" />
         <item itemvalue="Application.ListReader" />
       </list>
     </recent_temporary>
@@ -94,7 +110,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733161222234</updated>
-      <workItem from="1733161223282" duration="5489000" />
+      <workItem from="1733161223282" duration="11475000" />
     </task>
     <task id="LOCAL-00001" summary="Added problem nr1.">
       <option name="closed" value="true" />
@@ -112,7 +128,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733165793937</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Updated part two.">
+      <option name="closed" value="true" />
+      <created>1733166797195</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1733166797195</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,6 +145,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added problem nr1." />
     <MESSAGE value="Updated filepath." />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated filepath." />
+    <MESSAGE value="Updated part two." />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated part two." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Nr1/ListReader.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
