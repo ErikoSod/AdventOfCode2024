@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class levelChecker {
@@ -12,39 +11,50 @@ public class levelChecker {
     levelChecker(){
         try(BufferedReader br = new BufferedReader (new FileReader("src/Nr2/input.txt")))
         {
+
             int numberOfSafeReports = 0;
             String line;
             while ((line = br.readLine()) != null) {
                 List<Integer> lineAsList;
                 lineAsList = lineToList(line);
-                numberOfSafeReports += safeChecker(lineAsList);
-            }
+                numberOfSafeReports+= decreaseAndIncrease(lineAsList);
 
+            }
             System.out.println(numberOfSafeReports);
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-
-    private int safeChecker(List<Integer> lineAsList) {
-        int isSafe = 0;
-        if (lineAsList.getFirst() >lineAsList.getLast()) {
-            Collections.reverse(lineAsList);
+    public int decreaseAndIncrease(List<Integer> lineAsList){
+        int result = 0;
+        if((1==safeChecker(lineAsList,1))||(1==safeChecker(lineAsList,-1))){
+            result = 1;
         }
-        int temp;
-        for (int i = 0; i < lineAsList.size()-1; i++) {
-            temp = lineAsList.get(i+1) - lineAsList.get(i);
-            switch (temp){
-                case 1,2,3 -> isSafe=1;
-                default -> {return 0;}
+        return result;
+    }
+
+    public int safeChecker(List<Integer> lineAsList,int decrease) {
+
+        for (int i = 0; i <lineAsList.size(); i++) {
+            int Warnings = 0;
+            List<Integer> oneElementRemovedList = new ArrayList<>(lineAsList);
+            oneElementRemovedList.remove(i);
+
+             for (int j = 0; j < oneElementRemovedList.size() - 1; j++) {
+                 int tempDifference = oneElementRemovedList.get(j + 1) - oneElementRemovedList.get(j);
+                 switch (tempDifference * decrease) {
+                    case 1, 2, 3 -> Warnings += 0;
+                    default -> Warnings ++;
+                 }
+             }
+            if (Warnings == 0) {
+                return 1;
             }
         }
+        return 0;
+        }
 
-
-
-        return isSafe;
-    }
 
     private List<Integer> lineToList(String line) {
 
