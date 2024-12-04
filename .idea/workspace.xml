@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9092b76b-f09d-49d9-b440-1103f0485c36" name="Changes" comment="Nr2. part two update.">
-      <change afterPath="$PROJECT_DIR$/src/Nr3/Multiplier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Nr3/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Nr4/input.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Nr4/wordSearch.java" afterDir="false" />
+    <list default="true" id="9092b76b-f09d-49d9-b440-1103f0485c36" name="Changes" comment="Nr4 and Nr3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Nr4/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/Nr4/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Nr4/wordSearch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Nr4/WordSearch.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +90,7 @@
       <recent name="Nr2" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.wordSearch">
+  <component name="RunManager" selected="Application.WordSearch">
     <configuration name="Multiplier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Nr3.Multiplier" />
       <module name="AdventOfCode2024" />
@@ -106,12 +104,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="levelChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Nr2.levelChecker" />
+    <configuration name="WordSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Nr4.WordSearch" />
       <module name="AdventOfCode2024" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Nr2.*" />
+          <option name="PATTERN" value="Nr4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,12 +117,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="wordSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Nr4.wordSearch" />
+    <configuration name="levelChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Nr2.levelChecker" />
       <module name="AdventOfCode2024" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Nr4.*" />
+          <option name="PATTERN" value="Nr2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -165,7 +163,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.wordSearch" />
+        <item itemvalue="Application.WordSearch" />
         <item itemvalue="Application.Multiplier" />
         <item itemvalue="JUnit.levelCheckerTest" />
         <item itemvalue="Application.levelChecker" />
@@ -191,7 +189,7 @@
       <updated>1733161222234</updated>
       <workItem from="1733161223282" duration="34730000" />
       <workItem from="1733227760628" duration="5359000" />
-      <workItem from="1733324753004" duration="8161000" />
+      <workItem from="1733324753004" duration="19146000" />
     </task>
     <task id="LOCAL-00001" summary="Added problem nr1.">
       <option name="closed" value="true" />
@@ -241,7 +239,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733195992352</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Nr4 and Nr3">
+      <option name="closed" value="true" />
+      <created>1733333055352</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1733333055352</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,6 +260,7 @@
     <MESSAGE value="Nr2." />
     <MESSAGE value="Nr2. update." />
     <MESSAGE value="Nr2. part two update." />
-    <option name="LAST_COMMIT_MESSAGE" value="Nr2. part two update." />
+    <MESSAGE value="Nr4 and Nr3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Nr4 and Nr3" />
   </component>
 </project>

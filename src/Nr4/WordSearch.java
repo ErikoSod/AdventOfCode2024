@@ -1,54 +1,88 @@
 package Nr4;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-//TODO Hitta: Hor:5 Ver:3 Dia:4 ,Ska vara: Hor:5 Ver:3 Dia:4
-public class wordSearch {
-    public int foundXmas =0;
-    public String input =
-                        //List colum
-        "MMMSXXMASM\n" +//0
-        "MSAMXMSMSA\n" +//1
-        "AMXSXMAAMM\n" +//2
-        "MSAMASMSMX\n" +//3
-        "XMASAMXAMM\n" +//4
-        "XXAMMXXAMA\n" +//5
-        "SMSMSASXSS\n" +//6
-        "SAXAMASAAA\n" +//7
-        "MAMMMXMMMM\n" +//8
-        "MXMXAXMASX";   //9
 
-    public List<List<Character>> colum = new ArrayList<>();
+public class WordSearch {
+    public int foundXMAS;
+    public int foundMASinAnX;
+    boolean XMAS = false;
+    boolean MASAsX = true;
 
-    public wordSearch() {
-        creatList();
-        /*
-        for(List<Character> row : colum) {
-            System.out.println(row.toString());
+
+    public List<List<Character>> colum;
+
+
+    public WordSearch() {
+
+        try(BufferedReader br = new BufferedReader (new FileReader("src/Nr4/input.txt")))
+        {
+
+            String line;
+            StringBuilder inputLine = new StringBuilder();
+            while ((line = br.readLine()) != null) {
+                inputLine.append(line).append("\n");
+            }
+            creatInputList(inputLine.toString());
+
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
+        foundXMAS = listSearch(colum,XMAS);
+        foundMASinAnX = listSearch(colum, MASAsX);
 
-         */
-        foundXmas = listSearch(colum);
-        System.out.println(foundXmas);
+        System.out.println("Number of XMAS found: "+foundXMAS);
+        System.out.println("Number of MAS in a X found: "+foundMASinAnX);
     }
-    private int listSearch(List<List<Character>> colum) {
-        int foundXmas =0;
+    private int listSearch(List<List<Character>> colum, boolean masAsX) {
 
-        for (int y = 0; y < colum.size(); y++) {
+        int foundXmas =0;
+        int indexConstraints =0;
+
+        if(masAsX){
+            indexConstraints = 1;
+        }
+        for (int y = indexConstraints; y < colum.size()- indexConstraints; y++) {
             List<Character> row = colum.get(y);
 
-            for (int x = 0; x < row.size(); x++) {
+            for (int x = indexConstraints; x < row.size()- indexConstraints; x++) {
                 Character c = row.get(x);
 
-                if(c.equals('X')) {
+                if(c.equals('X') && 0== indexConstraints) {
                     foundXmas += horizontal(row,x);
                     foundXmas += vertical(colum, y, x);
                     foundXmas += diagonal(colum, y, x);
                 }
+                if(c.equals('A')&& 1== indexConstraints) {
+
+                        foundXmas += xSearch(colum, y, x);
+                }
             }
         }
         return foundXmas;
+    }
+
+    private int xSearch(List<List<Character>>colum, int startY, int startX ) {
+
+        int foundMasAsX =0;
+        StringBuilder word = new StringBuilder();
+        Character c = colum.get(startY).get(startX);
+            word.append(c);
+            c = colum.get(startY -1).get(startX -1);//Up Left
+            word.append(c);
+            c = colum.get(startY -1).get(startX +1);//Up Right
+            word.append(c);
+            c = colum.get(startY +1).get(startX -1);//Down Left
+            word.append(c);
+            c = colum.get(startY +1).get(startX +1);//Down Right
+            word.append(c);
+
+        foundMasAsX += checkForMasAsX(word.toString());
+        return foundMasAsX;
     }
 
     private int horizontal(List<Character> row, int startX) {
@@ -59,22 +93,20 @@ public class wordSearch {
             Character c = row.get(x);
             word.append(c);
             if(c.equals('S')) {
-                foundXmas += checkForXmas(word.toString(),x+1,0);
+                foundXmas += checkForXmas(word.toString());
                 break;
             }
         }
-        //foundXmas += checkForXmas(word.toString());
         word = new StringBuilder();
 
         for (int x = startX; x >= 0; x--) {
             Character c = row.get(x);
             word.append(c);
             if(c.equals('S')) {
-                foundXmas += checkForXmas(word.toString(),x+1,0);
+                foundXmas += checkForXmas(word.toString());
                 break;
             }
         }
-        //foundXmas += checkForXmas(word.toString());
         return foundXmas;
     }
 
@@ -89,22 +121,21 @@ public class wordSearch {
             word.append(c);
             if(c.equals('S')) {
 
-                foundXmas += checkForXmas(word.toString(),x+1,startY+1);
+                foundXmas += checkForXmas(word.toString());
                 break;
             }
         }
-        //foundXmas += checkForXmas(word.toString());//kollar upp
+
         word = new StringBuilder();
         for (int y = startY; y >= 0; y--) {
             Character c = colum.get(y).get(x);
             word.append(c);
             if(c.equals('S')) {
 
-                foundXmas += checkForXmas(word.toString(),x+1,startY+1);
+                foundXmas += checkForXmas(word.toString());
                 break;
             }
         }
-        //foundXmas += checkForXmas(word.toString());
 
         return foundXmas;
     }
@@ -119,7 +150,7 @@ public class wordSearch {
             Character c = colum.get(y).get(x);
             word.append(c);
             if(c.equals('S')) {
-                foundXmas += checkForXmas(word.toString(),x+1,y+1);
+                foundXmas += checkForXmas(word.toString());
                 break;
             }
             if(colum.get(y).size()-1==x)
@@ -128,7 +159,7 @@ public class wordSearch {
             }
             ++x;
         }
-        //foundXmas += checkForXmas(word.toString());
+
         x = startX;
         word = new StringBuilder();
 
@@ -136,7 +167,7 @@ public class wordSearch {
             Character c = colum.get(y).get(x);
             word.append(c);
             if(c.equals('S')) {
-                foundXmas += checkForXmas(word.toString(),x+1,y+1);
+                foundXmas += checkForXmas(word.toString());
                 break;
             }
             if(colum.get(y).size()-1==x)
@@ -145,7 +176,7 @@ public class wordSearch {
             }
             ++x;
         }
-        //foundXmas += checkForXmas(word.toString());
+
         word = new StringBuilder();
         x = startX;
 
@@ -153,7 +184,7 @@ public class wordSearch {
             Character c = colum.get(y).get(x);
             word.append(c);
             if(c.equals('S')) {
-                foundXmas += checkForXmas(word.toString(),x+1,y+1);
+                foundXmas += checkForXmas(word.toString());
                 break;
             }
             if(0==x)
@@ -162,14 +193,14 @@ public class wordSearch {
             }
             --x;
         }
-        //foundXmas += checkForXmas(word.toString());
+
         word = new StringBuilder();
         x = startX;
         for (int y = startY; y >= 0; y--) {
             Character c = colum.get(y).get(x);
             word.append(c);
             if(c.equals('S')) {
-                foundXmas += checkForXmas(word.toString(),x+1,y+1);
+                foundXmas += checkForXmas(word.toString());
                 break;
             }
             if(0==x)
@@ -178,11 +209,28 @@ public class wordSearch {
             }
             --x;
         }
-        //foundXmas += checkForXmas(word.toString());
+
         return foundXmas;
     }
 
-    public void creatList(){
+    private int checkForMasAsX(String word) {
+
+            if(word.equals("AMMSS")||word.equals("ASSMM")||word.equals("AMSMS")||word.equals("ASMSM")){
+                return 1;
+            }
+            return 0;
+    }
+
+    private int checkForXmas(String word) {
+
+        if(word.equals("XMAS")){
+            return 1;
+        }
+        return 0;
+    }
+
+    public void creatInputList(String input) {
+        colum = new ArrayList<>();
         Scanner sc = new Scanner(input);
         while(sc.hasNext()) {
 
@@ -191,20 +239,11 @@ public class wordSearch {
             for(int i = 0; i < line.length(); i++){
                 row.add(line.charAt(i));
             }
-            colum.add(row);
+            this.colum.add(row);
         }
-    }
-
-    private int checkForXmas(String word,int x, int y) {
-
-        if(word.equals("XMAS")){
-            //System.out.println("Rätt vid :"+x+","+y);
-            return 1;
-        }
-        return 0;
     }
 
     public static void main(String[] args) {
-        new wordSearch();
+        new WordSearch();
     }
 }
