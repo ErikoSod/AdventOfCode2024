@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9092b76b-f09d-49d9-b440-1103f0485c36" name="Changes" comment="Nr2. update.">
-      <change afterPath="$PROJECT_DIR$/Test/Nr2/levelCheckerTest.java" afterDir="false" />
+    <list default="true" id="9092b76b-f09d-49d9-b440-1103f0485c36" name="Changes" comment="Nr2. part two update.">
+      <change afterPath="$PROJECT_DIR$/src/Nr3/Multiplier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Nr3/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Nr4/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Nr4/wordSearch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AdventOfCode2024.iml" beforeDir="false" afterPath="$PROJECT_DIR$/AdventOfCode2024.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Nr2/levelChecker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Nr2/levelChecker.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,29 +19,32 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "ErikoSod"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;ErikoSod&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/ErikoSod/AdventOfCode2024",
-    "accountId": "c0a37354-ecbf-402a-9d24-b2f2745904fe"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/ErikoSod/AdventOfCode2024&quot;,
+    &quot;accountId&quot;: &quot;c0a37354-ecbf-402a-9d24-b2f2745904fe&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2pfdm9HOn7Mk50Rk1XAciCTav7b" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -50,7 +54,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.ListReader.executor": "Debug",
+    "Application.Multiplier.executor": "Run",
     "Application.levelChecker.executor": "Run",
+    "Application.wordSearch.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "JUnit.levelCheckerTest.DecreasingListWithLastIndexHigh.executor": "Run",
     "JUnit.levelCheckerTest.IncreasingListWithLastIndexLow.executor": "Debug",
@@ -86,13 +92,39 @@
       <recent name="Nr2" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.levelCheckerTest">
+  <component name="RunManager" selected="Application.wordSearch">
+    <configuration name="Multiplier" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Nr3.Multiplier" />
+      <module name="AdventOfCode2024" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Nr3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="levelChecker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Nr2.levelChecker" />
       <module name="AdventOfCode2024" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Nr2.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="wordSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Nr4.wordSearch" />
+      <module name="AdventOfCode2024" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Nr4.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -115,22 +147,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="levelCheckerTest.DecreasingListWithLastIndexHigh" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AdventOfCode2024" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Nr2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Nr2" />
-      <option name="MAIN_CLASS_NAME" value="Nr2.levelCheckerTest" />
-      <option name="METHOD_NAME" value="DecreasingListWithLastIndexHigh" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="levelCheckerTest.IncreasingListWithLastIndexLow" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AdventOfCode2024" />
       <extension name="coverage">
@@ -147,29 +163,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="levelCheckerTest.firstIndexHighList" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AdventOfCode2024" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Nr2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Nr2" />
-      <option name="MAIN_CLASS_NAME" value="Nr2.levelCheckerTest" />
-      <option name="METHOD_NAME" value="firstIndexHighList" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.wordSearch" />
+        <item itemvalue="Application.Multiplier" />
         <item itemvalue="JUnit.levelCheckerTest" />
         <item itemvalue="Application.levelChecker" />
         <item itemvalue="JUnit.levelCheckerTest.IncreasingListWithLastIndexLow" />
-        <item itemvalue="JUnit.levelCheckerTest.firstIndexHighList" />
-        <item itemvalue="JUnit.levelCheckerTest.DecreasingListWithLastIndexHigh" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +189,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1733161222234</updated>
-      <workItem from="1733161223282" duration="33610000" />
+      <workItem from="1733161223282" duration="34730000" />
+      <workItem from="1733227760628" duration="5359000" />
+      <workItem from="1733324753004" duration="8161000" />
     </task>
     <task id="LOCAL-00001" summary="Added problem nr1.">
       <option name="closed" value="true" />
@@ -231,7 +233,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733178226722</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Nr2. part two update.">
+      <option name="closed" value="true" />
+      <created>1733195992352</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1733195992352</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,32 +253,7 @@
     <MESSAGE value="Updated part two." />
     <MESSAGE value="Nr2." />
     <MESSAGE value="Nr2. update." />
-    <option name="LAST_COMMIT_MESSAGE" value="Nr2. update." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Nr2/levelChecker.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="56" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Nr2/levelChecker.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="57" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Nr2/levelChecker.java</url>
-          <line>44</line>
-          <option name="timeStamp" value="58" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Nr2/levelChecker.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="59" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Nr2. part two update." />
+    <option name="LAST_COMMIT_MESSAGE" value="Nr2. part two update." />
   </component>
 </project>
